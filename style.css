@@ -2,6 +2,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  --main-red-color: #b81919;
+}
+
+.main-red-collor {
+  color: var(--main-red-color);
+}
+
 html {
   font-size: 10px;
 }
@@ -35,4 +43,29 @@ html {
 .frame {
   border: 1px solid #cf0909;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+}
+
+.header-title {
+  flex: 1;
+  text-align: center;
+  font-size: 3.6rem;
+  font-family: "homemade apple", sans-serif;
+  text-transform: lowercase;
+}
+
+.header-btn {
+  font-size: 1.8rem;
+  font-family: "bungee", sans-serif;
+
+  padding: 24px;
+  background: unset;
+  outline: unset;
+  border: unset;
 }
