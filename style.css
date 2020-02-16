@@ -4,10 +4,16 @@
 
 :root {
   --main-red-color: #b81919;
+
+  --main-black-color: #484848;
 }
 
 .main-red-collor {
   color: var(--main-red-color);
+}
+
+.main-black-color {
+  color: var(--main-black-color);
 }
 
 html {
@@ -41,10 +47,12 @@ html {
 }
 
 .frame {
-  border: 1px solid #cf0909;
+  border: 1px solid var(--main-black-color);
   height: 100%;
+
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .header {
@@ -55,6 +63,8 @@ html {
 .header-title {
   flex: 1;
   text-align: center;
+
+  color: var(--main-black-color);
   font-size: 3.6rem;
   font-family: "homemade apple", sans-serif;
   text-transform: lowercase;
@@ -70,6 +80,14 @@ html {
   background: unset;
   outline: unset;
   border: unset;
+}
+
+.header-btn.main-red-collor:active {
+  text-shadow: 1px 1px 2px var(--main-red-color);
+}
+
+.header-btn.main-black-color:active {
+  text-shadow: 1px 1px 2px var(--main-black-color);
 }
 
 .add {
@@ -106,4 +124,31 @@ html {
   border: unset;
   background: unset;
   outline: unset;
+}
+
+.add-btn.main-black-color:active {
+  text-shadow: 1px 1px 2px var(--main-black-color);
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo {
+  position: relative;
+  flex: 1 0 auto;
+  text-align: center;
+
+  min-height: 34px;
+  margin: 16px 0 0;
+  font-family: "homemade apple", sans-serif;
+  font-size: 24px;
+  border-bottom: 1px solid var(--main-red-color);
+}
+
+.todo-text {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
